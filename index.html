@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <title>JS-ActivityDay</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   
-  
+  <style>
+    h4 {
+  color: blue;
+  font-weight: bolder;
+  }
+  </style>
 </head>
 
 
@@ -18,28 +24,108 @@
 
   <div class="jumbotron text-center">
     <h3 id="demo">Question-01:  Calculate a number’s Square</h3>
-
     <input type="number" id="myNumber1" placeholder="EnterYourNumber" required>
     <input type="button" value="Calc" onclick=" squareMyNumber()">
-    <input type="button" value="clear" onclick="clr();">
+    <input type="button" value="clear" onclick="clr1()">
     <h4 id="answer1"></h4>
   </div>
 
   <div class="jumbotron text-center">
     <h3 id="demo">Question-02:  Sample Claculator</h3>
-
     <input type="number" id="myNumber2a" placeholder="EnterYourNumber 1" required>
     <input type="number" id="myNumber2b" placeholder="EnterYourNumber 2" required>
-    <input type="button" value="Add" onclick="addNum()">
-    <input type="button" value="Sub" onclick="subNum()">
-    <input type="button" value="Multi" onclick="multiNum()">
-    <input type="button" value="Div" onclick="divNum()">
-    <input type="button" value="clear" onclick="clr();">
+    <input type="button" value="clear" onclick="clr2();">
+    <ul class="nav">
+      <li>
+        <input type="button" value="+" onclick="addNum()" class="my-btn">
+        <input type="button" value="-" onclick="subNum()" class="my-btn">
+      </li>
+      <li>
+        <input type="button" value="x" onclick="multiNum()" class="my-btn">
+        <input type="button" value="/" onclick="divNum()" class="my-btn">
+      </li>
+    </ul>
+
     <h4 id="answer2"></h4>
   </div>
 
+  <div class="jumbotron text-center">
+    <h3 id="demo">Question-03:  function to print “Hello World” in an alert</h3>
+    <input type="button" value="Click here to Display a message" onclick=" click3()">
+  </div>
+
+  <div class="jumbotron text-center">
+   <h3 id="demo">Question-04: function to calculate the volume of a cuboid</h3>
+    <ul class="nav flex-column">
+      <li><input type="number" min="0" step="0.5" oninput="validity.valid||(value='');" id="myNumber4a" placeholder="Enter length" required ></li>
+      <li><input type="number" min="0" step="0.5" oninput="validity.valid||(value='');" id="myNumber4b" placeholder="Enter width" required></li> 
+      <li><input type="number" min="0" step="0.5" onkeyup="if(this.value<0){this.value= this.value * -1}" id="myNumber4c" placeholder="Enter height" required></li> 
+      <li><input type="button" value="Volume of cuboid" onclick="findCuboid()"></li> 
+      <li><input type="button" value="clear" onclick="clr4();"></li> 
+    </ul>
+   <h4 id="answer4"></h4>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h3 id="demo">Question-05:   Create an object</h3>
+    <!-- <input type="number" id="myNumber1" placeholder="EnterYourNumber" required> -->
+    <input type="button" value="Person Details" onclick=" getPersonDetails()">
+    <input type="button" value="clear" onclick="clr5()">
+    <h4 id="answer5"></h4>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h3 id="demo">Question-06:   Create an object and display inline</h3>
+    <!-- <input type="number" id="myNumber1" placeholder="EnterYourNumber" required> -->
+    <input type="button" value="Course Details" onclick=" getCourseDetails()">
+    <input type="button" value="clear" onclick="clr6()">
+    <ul class="nav flex-column">
+      <li><h4 id="answer6a"></h4></li>
+      <li><h4 id="answer6b"></h4></li>
+      <li><h4 id="answer6c"></h4></li>
+      <li><h4 id="answer6d"></h4></li>
+    </ul>
+  </div>
+
+  
+  <div class="jumbotron text-center">
+    <h3 id="demo">Question-12:  Two methods for creating an empty array</h3>
+    <h4>arrayA = [ ]<br>var arrayB = new Array( )
+    </h4>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h3 id="demo">Question-01:  Find max and min value in array</h3>
+    <!-- <input type="number" id="myNumber1" placeholder="EnterYourNumber" required> -->
+    <ul class="nav flex-column">
+      <li>
+        <input type="button" value="Click to find Maximum" onclick=" findMax()">
+        <input type="button" value="Click to find Minimum" onclick=" findMin()">
+        <input type="button" value="clear" onclick="clr13a()">
+      </li>
+      <li>
+        <h4 id="answer13a"></h4>
+        <h4 id="answer13b"></h4>
+      </li>
+    </ul>
+  </div>
+
+
+
+
   <script src="question1.js"></script>
   <script src="question2.js"></script>
+  <script src="question3.js"></script>
+  <script src="question4.js"></script>
+  <script src="question5.js"></script>
+  <script src="question6.js"></script>
+
+  <script src="question12.js"></script>
+  <script src="question13.js"></script>
+  <script src="question14.js"></script>
+  <script src="question15.js"></script>
+  <script src="question16.js"></script>
+  <script src="question17.js"></script>
 
 </body>
 </html>

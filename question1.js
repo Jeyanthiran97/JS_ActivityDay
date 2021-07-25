@@ -2,11 +2,15 @@ function squareMyNumber() {
     var x, y;
    x = document.getElementById("myNumber1").value;
    y = x * x;
-    document.getElementById("answer1").innerHTML = "Square of "+ x +" is =" + y;
+    
+   if(document.getElementById("myNumber1").value.length == 0){
+        alert("Alert: Please enter the number");
+    } else {
+     document.getElementById("answer1").innerHTML = "Square of "+ x +" is =" + y;
+    }
 }
 
-
-function clr() {
+function clr1() {
     document.getElementById("myNumber1").value = "";
     document.getElementById("answer1").innerHTML = "";
 
